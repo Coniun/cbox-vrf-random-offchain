@@ -251,13 +251,6 @@ func main() {
 	for len(nftWinnerList) < nftCount {
 		// get random cbox id
 		randBox := randInt(0, 6303)
-
-		// add this random cbox id to current random seed
-		// to make it 'moaar' random
-		randByte := generateRandomBytes(randBox)
-		newSeed := binary.BigEndian.Uint64(md5Seed.Sum(randByte))
-		rand.Seed(int64(seed) + int64(newSeed))
-
 		// add this cbox to winnerList if not ignored or not already won from this raffle
 		if !contains(nftWinnerList, randBox) && !contains(ignoreList, randBox) {
 			nftWinnerList = append(nftWinnerList, randBox)
