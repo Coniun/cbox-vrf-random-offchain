@@ -42,4 +42,4 @@ We believe that, this system %100 transparent and can be noterized by everyone.
 
 ## Links
 
-- CBOXRandomSeedGenerator contract (TBA)
+- [CBOXRandomSeedGenerator contract](https://etherscan.io/address/0xaf8bfff3962e49afaea9e49bbafab57f4daa77e0#readContract)
