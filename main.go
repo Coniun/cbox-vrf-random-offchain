@@ -265,11 +265,6 @@ func main() {
 }
 
 
-func generateRandomBytes(size int) (blk []byte) {
-	blk = make([]byte, size)
-	_, _ = rand.Read(blk)
-	return blk
-}
 func contains(s []int, i int) bool {
 	for _, v := range s {
 		if v == i {
