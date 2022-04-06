@@ -22,6 +22,7 @@ func main() {
 	md5Seed := md5.New()
 	_, _ = io.WriteString(md5Seed, contractRandomSeed)
 	var seed = binary.BigEndian.Uint64(md5Seed.Sum(nil))
+	rand.Seed(int64(seed))
 
 
 	// this ignore list is team/invester owned cboxes.
@@ -244,6 +245,7 @@ func main() {
 		6164,
 		6277,
 	}
+
 
 
 	for len(nftWinnerList) < nftCount {
