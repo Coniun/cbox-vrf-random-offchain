@@ -250,7 +250,7 @@ func main() {
 
 	for len(nftWinnerList) < nftCount {
 		// get random cbox id
-		randBox := randInt(0, 6303)
+		randBox := randInt(0, 6302)
 		// add this cbox to winnerList if not ignored or not already won from this raffle
 		if !contains(nftWinnerList, randBox) && !contains(ignoreList, randBox) {
 			nftWinnerList = append(nftWinnerList, randBox)
