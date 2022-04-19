@@ -14,9 +14,9 @@ func main() {
 	nftWinnerList := []int{}
 
 	// get seed from on-chain contract (etherscan)
-	var contractRandomSeed = "29775269982517917835738859382887719068435719989660386033959329369793460616679"
+	var contractRandomSeed = "TBA"
 	// update nftCount (for week 1, it's 465)
-	var nftCount = 465
+	var nftCount = 3
 
 	// we are converting seed to md5 then int64
 	md5Seed := md5.New()
@@ -28,10 +28,13 @@ func main() {
 	// this ignore list is team/invester owned cboxes.
 	ignoreList := []int{
 		0,
+		678,
+		679,
 		742,
 		2478,
 		2479,
 		2654,
+		3217,
 		3637,
 		3826,
 		3972,
