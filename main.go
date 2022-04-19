@@ -13,9 +13,8 @@ func main() {
 
 	nftWinnerList := []int{}
 
-	// get seed from on-chain contract (etherscan)
-	var contractRandomSeed = "TBA"
-	// update nftCount (for week 1, it's 465)
+	// CBOXRandomSeedGenerator: https://etherscan.io/address/0xaf8BFFf3962E49afaEA9e49BbaFAb57F4daa77E0#readContract
+	var contractRandomSeed = "GET_SEED_FROM_CBOXRandomSeedGenerator_CONTRACT"
 	var nftCount = 3
 
 	// we are converting seed to md5 then int64
@@ -25,7 +24,8 @@ func main() {
 	rand.Seed(int64(seed))
 
 
-	// this ignore list is team/invester owned cboxes.
+	// this ignore list is team/investor owned cboxes.
+	// this list can be updated (please watch this repo)
 	ignoreList := []int{
 		0,
 		678,
@@ -253,8 +253,8 @@ func main() {
 
 
 	for len(nftWinnerList) < nftCount {
-		// get random cbox id
-		randBox := randInt(0, 6303)
+		// get random cbox id between 0, 6302
+		randBox := randInt(0, 6302)
 		// add this cbox to winnerList if not ignored or not already won from this raffle
 		if !contains(nftWinnerList, randBox) && !contains(ignoreList, randBox) {
 			nftWinnerList = append(nftWinnerList, randBox)
@@ -263,8 +263,6 @@ func main() {
 
 
 	fmt.Println(strings.Trim(strings.Join(strings.Fields(fmt.Sprint(nftWinnerList)), ","), "[]"))
-
-
 
 }
 
@@ -275,7 +273,6 @@ func contains(s []int, i int) bool {
 			return true
 		}
 	}
-
 	return false
 }
 
