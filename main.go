@@ -27,6 +27,14 @@ func main() {
 	// this ignore list is team/investor owned cboxes.
 	// this list can be updated (please watch this repo)
 	ignoreList := []int{
+		// included in cbox, ignored for one week
+		6045,
+		4702,
+		4579,
+		4026,
+		3842,
+		2377,
+		// ---
 		0,
 		678,
 		679,
