@@ -15,7 +15,7 @@ func main() {
 
 	// CBOXRandomSeedGenerator: https://etherscan.io/address/0xaf8BFFf3962E49afaEA9e49BbaFAb57F4daa77E0#readContract
 	var contractRandomSeed = "GET_SEED_FROM_CBOXRandomSeedGenerator_CONTRACT"
-	var nftCount = 6
+	var nftCount = 16
 
 	// we are converting seed to md5 then int64
 	md5Seed := md5.New()
@@ -27,14 +27,6 @@ func main() {
 	// this ignore list is team/investor owned cboxes.
 	// this list can be updated (please watch this repo)
 	ignoreList := []int{
-		// included in cbox, ignored for one week
-		6045,
-		4702,
-		4579,
-		4026,
-		3842,
-		2377,
-		// ---
 		0,
 		678,
 		679,
