@@ -27,6 +27,10 @@ func main() {
 	// this ignore list is team/investor owned cboxes.
 	// this list can be updated (please watch this repo)
 	ignoreList := []int{
+		// partner passes, excluded
+		981, 4402, 1744, 1796, 1089, 2693, 530, 1743, 3560, 3257, 2360, 3608, 3939, 1877, 754, 3663, 195, 4102, 1476,
+		2422, 3874, 1088, 5823, 4026, 3281, 1404, 1482, 3015, 3722, 4539, 1224, 3479, 1892, 5824, 246, 2311, 2558,
+		// - end of partner passes
 		0,
 		678,
 		679,
