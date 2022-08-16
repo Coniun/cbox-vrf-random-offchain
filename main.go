@@ -15,7 +15,7 @@ func main() {
 
 	// CBOXRandomSeedGenerator: https://etherscan.io/address/0xaf8BFFf3962E49afaEA9e49BbaFAb57F4daa77E0#readContract
 	var contractRandomSeed = "GET_SEED_FROM_CBOXRandomSeedGenerator_CONTRACT"
-	var nftCount = 20
+	var nftCount = 28
 
 	// we are converting seed to md5 then int64
 	md5Seed := md5.New()
