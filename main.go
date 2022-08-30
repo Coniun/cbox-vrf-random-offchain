@@ -4483,15 +4483,6 @@ func main() {
 
 }
 
-func contains(s []int, i int) bool {
-	for _, v := range s {
-		if v == i {
-			return true
-		}
-	}
-	return false
-}
-
 func randInt(min int, max int) int {
 	return min + rand.Intn(max-min+1)
 }
